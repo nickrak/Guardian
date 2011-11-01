@@ -59,6 +59,17 @@ public class Utils
 	}
 
 	/**
+	 * Checks if inputted string is a byte
+	 */
+	public static boolean isByte(String str) {
+		try {
+			Byte.parseByte(str);
+			return true;
+		} catch (final NumberFormatException ex) {}
+		return false;
+	}
+
+	/**
 	 * Java version of PHP's join(array, delimiter). Takes any kind of collection (List, HashMap etc)
 	 */
 	public static String join(Collection<?> s, String delimiter) {
