@@ -25,6 +25,7 @@ public class QueryParams implements Cloneable
 	private SummarizationMode sum;
 	private String textMatch;
 	private List<World> worlds;
+	@SuppressWarnings("unused")
 	private boolean needId, needDate, needPlayer, needCoords, needSubTableInfo;
 
 	/**
@@ -160,5 +161,11 @@ public class QueryParams implements Cloneable
 
 	public void setWorlds(List<World> worlds) {
 		this.worlds = worlds;
+	}
+
+	@Override
+	public QueryParams clone() {
+		// TODO
+		return null;
 	}
 }
